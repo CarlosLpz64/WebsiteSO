@@ -1,0 +1,159 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-color: #0099ff;
+}
+
+/*GRID*/
+.grid-container {
+    display: grid;
+    grid-template-rows: 10% 1fr 15%;
+    grid-template-columns:  20% 1fr 7%;
+    width: 100vw;
+    height:100vh; 
+}
+.grid-itemHeader {
+    grid-column: 1/4; 
+    grid-row: 1/2; 
+    z-index: 50;
+    box-shadow: 0px 10px 20px -12px rgb(105, 102, 102);
+}
+.grid-itemSidebar {
+    grid-column: 1/2; 
+    grid-row: 2/4; 
+    z-index: 49;
+    overflow: scroll;
+}
+.grid-itemContenido{
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 2/3; 
+    height:2600px;
+    z-index: -50;
+}
+.circulo{
+    grid-column: 3/4; 
+    grid-row: 3/4; 
+    border-radius: 100%;
+    height: 4vw;
+    width: 4vw;
+}
+
+/*EXTRAS*/
+.fixed{
+    position: fixed;
+}
+/*FLEX*/
+.contenedorFlexC{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.Centrar{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/*CUADROS*/
+.Total1{
+    width: 80vw;
+    height: 15vh;
+}
+.Botones{
+    height: 3vw;
+    width: 8vw;
+    border-radius: 0.5vw;
+    margin-left: 2vw;
+}
+.grid-itemSidebar div{ /*Botones*/
+    height: 2vw;
+    width: 12vw;
+    background-color: #e0f3ff;
+    margin-top: 1vw;
+}
+.Sec1{
+    height: 15vw;
+    width: 75vw;
+    box-shadow: 0px 0px 15px 0.1px gray;
+}
+.Sec2{
+    height: 35vw;
+    width: 35vw;
+    margin: 1vw;
+}
+.Sec3{
+    height: 20vw;
+    width: 18vw;
+    margin: 1vw;
+}
+.Sec4{
+    height: 45vw;
+    width: 100%;
+    margin: 2vw;
+}
+.Espacio5 .Sec4 > * {
+    height: 3vw;
+    width: 100%;
+    border-style: solid;
+    border-width: 0.2px;
+    border-color: gainsboro;
+}
+.Sec4 > div:nth-child(odd){
+    background-color: #e9e8e8;
+}
+.Sec4 > div:nth-child(even){
+    background-color: #f8f8f8;
+}
+.Sec5 {
+    width: 90%;
+    height: 5vw;
+}
+/*ESPACIOS*/
+.Espacio1{
+    height: 6vw;
+}
+.Espacio2{
+    height: 17vw;
+}
+.Espacio3{
+    height: 37vw;
+}
+.Espacio4{
+    height: 22vw;
+    justify-content: space-evenly;
+}
+.Espacio5{
+    height: 50vw;
+}
+/*COLORES*/
+#Gris{ background-color: #252733; }
+#Blanco{ background-color: #fafbfc; }
+#Blanco2{ background-color: #f7f9fa; }
+#Blanco3{ background-color: #d6d8da; }
+#Azul{ background-color: #3f6ad8; }
+#Azul2{ background-color: #e0f3ff; }
+#Rojo {background-color: #ff0000; }
+#Amarillo {background-color: #f7b924; }
+#Prueba{ background-image: linear-gradient(0, #ff8600 0, #ff7707 12.5%, #ff630e 25%, #fb4610 37.5%, #ef0f0f 50%, #e20011 62.5%, #d70017 75%, #d0001e 87.5%, #cc0028 100%);}
+#DegMorado{ background-image: radial-gradient(circle at 50% 120.71%, #ff6ffc 0, #ff6afb 12.5%, #ff65f4 25%, #e75ee9 37.5%, #be55d8 50%, #964cc5 62.5%, #7143b3 75%, #4e3ca3 87.5%, #293694 100%); }
+
+/*ANIMACIONES*/
+.rotated{
+	animation-name: rotation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes rotation {
+  0% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+  }
+}
